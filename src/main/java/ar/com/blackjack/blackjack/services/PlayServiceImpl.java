@@ -63,8 +63,7 @@ public class PlayServiceImpl implements PlayService<Play>{
         return playRepository.reporteEmpates();
     }
 
-    @Override
-    public List<?> reportePromedios() {
-        return playRepository.reportePromedios();
-    }
+
+
+
 }

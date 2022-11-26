@@ -24,6 +24,5 @@ public interface PlayService<E> {
 
     public int reporteEmpates();
 
-    public List<?> reportePromedios();
 
 }
