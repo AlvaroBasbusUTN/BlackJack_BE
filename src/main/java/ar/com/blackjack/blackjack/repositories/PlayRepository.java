@@ -31,15 +31,15 @@ public interface PlayRepository extends JpaRepository<Play, Long> {
                     "WHERE ganador = 'croupier' ",
             nativeQuery = true
     )
-    public List<?> reporteVictoriasCroupier();
+    public int reporteVictoriasCroupier();
 
     @Query(
-            value = "SELECT COUNT(DISTINCT id_play) as victorias" +
+            value = "SELECT COUNT(DISTINCT id_play) as victorias " +
                     "FROM play " +
                     "WHERE ganador = 'jugador' ",
             nativeQuery = true
     )
-    public List<?> reporteVictoriasJugador();
+    public int reporteVictoriasJugador();
 
     @Query(
             value = "SELECT COUNT(DISTINCT id_play) as empates " +
@@ -47,27 +47,12 @@ public interface PlayRepository extends JpaRepository<Play, Long> {
                     "WHERE ganador = 'empate' ",
             nativeQuery = true
     )
-    public List<?> reporteEmpates();
-
-    @Query(
-            value = "SELECT AVG(puntos_croupier) as promedioCroupier " +
-                    "FROM play " +
-                    "WHERE puntos_croupier='21' ",
-            nativeQuery = true
-    )
-    public List<?> reportePromedios();
+    public int reporteEmpates();
 
 
-    /*
-     @Query(
-            value = "SELECT AVG(puntos_croupier) as promedioCroupier, " +
-                    "AVG(puntos_jugador) as promedioJugador " +
-                    "FROM play " +
-                    "WHERE puntos_croupier='21' OR puntos_jugador='21' ",
-            nativeQuery = true
-    )
-    public List<?> reportePromedios();
-     */
+
+
+
 
 
 

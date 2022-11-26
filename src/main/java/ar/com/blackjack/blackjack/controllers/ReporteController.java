@@ -25,24 +25,21 @@ public class ReporteController {
 
     @GetMapping("/victoriasCroupier")
     @ResponseBody
-    private ResponseEntity<?> VictoriasCroupier(){
-        var list= playService.reporteVictoriasCroupier();
-        return ResponseEntity.ok(list);
+    private int VictoriasCroupier(){
+        return playService.reporteVictoriasCroupier();
     }
 
     @GetMapping("/victoriaJugador")
     @ResponseBody
-    private ResponseEntity<?> victoriasJugador(){
-        var list= playService.reporteVictoriasJugador();
-        return ResponseEntity.ok(list);
+    private int victoriasJugador(){
+        return playService.reporteVictoriasJugador();
     }
 
 
     @GetMapping("/empates")
     @ResponseBody
-    private ResponseEntity<?> reporteEmpates(){
-        var list= playService.reporteEmpates();
-        return ResponseEntity.ok(list);
+    private int reporteEmpates(){
+        return playService.reporteEmpates();
     }
 
     @GetMapping("/promedio")
