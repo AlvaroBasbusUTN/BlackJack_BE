@@ -18,12 +18,11 @@ public interface PlayService<E> {
 
     public List<?> reporteJugFecha();
 
-    public List<?> reporteVictoriasCroupier();
+    public int reporteVictoriasCroupier();
 
-    public List<?> reporteVictoriasJugador();
+    public int reporteVictoriasJugador();
 
-    public List<?> reporteEmpates();
+    public int reporteEmpates();
 
-    public List<?> reportePromedios();
 
 }

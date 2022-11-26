@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/reporte")
@@ -25,31 +27,25 @@ public class ReporteController {
 
     @GetMapping("/victoriasCroupier")
     @ResponseBody
-    private ResponseEntity<?> VictoriasCroupier(){
-        var list= playService.reporteVictoriasCroupier();
-        return ResponseEntity.ok(list);
+    private int VictoriasCroupier(){
+        return playService.reporteVictoriasCroupier();
     }
 
     @GetMapping("/victoriaJugador")
     @ResponseBody
-    private ResponseEntity<?> victoriasJugador(){
-        var list= playService.reporteVictoriasJugador();
-        return ResponseEntity.ok(list);
+    private int victoriasJugador(){
+        return playService.reporteVictoriasJugador();
     }
 
 
     @GetMapping("/empates")
     @ResponseBody
-    private ResponseEntity<?> reporteEmpates(){
-        var list= playService.reporteEmpates();
-        return ResponseEntity.ok(list);
+    private int empates(){
+        return playService.reporteEmpates();
     }
 
-    @GetMapping("/promedio")
-    @ResponseBody
-    private ResponseEntity<?> reportePromedios(){
-        var list= playService.reportePromedios();
-        return ResponseEntity.ok(list);
-    }
+
+
+
 
 }

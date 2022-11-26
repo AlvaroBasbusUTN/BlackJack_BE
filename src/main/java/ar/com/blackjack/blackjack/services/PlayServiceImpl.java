@@ -49,22 +49,21 @@ public class PlayServiceImpl implements PlayService<Play>{
     }
 
     @Override
-    public List<?> reporteVictoriasCroupier() {
+    public int reporteVictoriasCroupier() {
         return playRepository.reporteVictoriasCroupier();
     }
 
     @Override
-    public List<?> reporteVictoriasJugador() {
+    public int reporteVictoriasJugador() {
         return playRepository.reporteVictoriasJugador();
     }
 
     @Override
-    public List<?> reporteEmpates() {
+    public int reporteEmpates() {
         return playRepository.reporteEmpates();
     }
 
-    @Override
-    public List<?> reportePromedios() {
-        return playRepository.reportePromedios();
-    }
+
+
+
 }
